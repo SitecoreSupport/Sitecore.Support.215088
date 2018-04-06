@@ -10,6 +10,11 @@ namespace Sitecore.Support.ExperienceForms.Mvc.Models.Fields
 {
   public class StringInputViewModel: Sitecore.ExperienceForms.Mvc.Models.Fields.StringInputViewModel
   {
-  
+    [AllowHtml, DynamicRequired, DynamicValidation]
+    public override string Value
+    {
+      get { return base.Value; }
+      set { base.Value = value; }
+    }
   }
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Mvc;
 using Sitecore.Data.Items;
 using Sitecore.Diagnostics;
 using Sitecore.ExperienceForms.Mvc.Constants;
@@ -26,7 +27,7 @@ namespace Sitecore.Support.ExperienceForms.Mvc.Models.Fields
     /// <summary>
     /// Gets or sets the password confirmation.
     /// </summary>
-    [LocalizedCompare("Value", TitleProperty = "ConfirmPasswordLabel", OtherTitleProperty = "Title", ErrorMessage = Texts.PasswordsNotMatching)]
+    [AllowHtml, LocalizedCompare("Value", TitleProperty = "ConfirmPasswordLabel", OtherTitleProperty = "Title", ErrorMessage = "The {0} and {1} do not match.")]
     public string ConfirmPassword { get; set; }
 
     /// <summary>
